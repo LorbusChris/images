@@ -15,6 +15,7 @@ RUN mkdir -p /go/src/ \
     && yum install -y --enablerepo=* \
         --setopt=skip_if_unavailable=True \
         --setopt=skip_missing_names_on_install=False \
+        --setopt=install_weak_deps=False \
         bc file findutils gpgme git hostname lsof make socat tar tree util-linux wget which zip \
         go-toolset-1.18.2 openssl openssl-devel systemd-devel gpgme-devel libassuan-devel \
     && yum clean all \
