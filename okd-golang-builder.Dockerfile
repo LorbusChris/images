@@ -18,6 +18,7 @@ RUN mkdir -p /go/src/ \
         --setopt=install_weak_deps=False \
         bc file findutils gpgme git hostname lsof make socat tar tree util-linux wget which zip \
         go-toolset-1.18.2 openssl openssl-devel systemd-devel gpgme-devel libassuan-devel \
+        nodejs \
     && yum clean all \
     # goversioninfo is not shipped as RPM in Stream9, so install it with go instead
     && go install github.com/josephspurrier/goversioninfo/cmd/goversioninfo@latest
